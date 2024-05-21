@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+    padding: 20px;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #111;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.header .title {
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.header .navigation a {
+    padding: 8px 15px;
+    font-size: 1.1rem;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.header .navigation a:hover {
+    color: #bbb;
+}
+
+.main-content {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.main-content .main-title {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.main-content .main-subtitle {
+    font-size: 1.2rem;
+    color: #bbb;
+    margin-bottom: 30px;
+}
+
+.item-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.item img {
+    width: auto;
+    height: auto;
+    max-height: 200px;
+    transition: transform 0.3s;
+}
+
+.item:hover img {
+    transform: scale(1.05);
+}
+
+.button {
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    margin: 20px 10px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background-color: #bbb;
+    transform: translateY(-3px);
+}
+
+.download-buttons {
+    margin: 20px 0;
+}
+
+.download-button {
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    margin: 10px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.download-button.windows {
+    background-color: #0078d4;
+    color: #fff;
+}
+
+.download-button.android {
+    background-color: #a4c639;
+    color: #fff;
+}
+
+.download-button:hover {
+    transform: translateY(-3px);
+}
+
+.download-button.windows:hover {
+    background-color: #005a9e;
+}
+
+.download-button.android:hover {
+    background-color: #8a9b1e;
+}
+
+.contact-form {
+    background: #111;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 40px auto;
+    max-width: 600px;
+    text-align: left;
+    animation: fadeIn 1s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #bbb;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    background: #333;
+    color: #fff;
+    transition: background 0.3s, transform 0.3s;
+    box-sizing: border-box;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    background: #444;
+    transform: translateY(-2px);
+}
+
+.contact-form button {
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background-color: #bbb;
+    transform: translateY(-3px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header .navigation a {
+        font-size: 0.9rem;
+    }
+
+    .header .title {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header .navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header .navigation a {
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+
+    .header .title {
+        font-size: 1.8rem;
+    }
+
+    .main-content .main-title {
+        font-size: 2.5rem;
+    }
+
+    .main-content .main-subtitle {
+        font-size: 1rem;
+    }
+}

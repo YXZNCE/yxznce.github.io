@@ -1,80 +1,58 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loader</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-
-        * {
-      
-            font-family: 'Poppins', sans-serif;
-        }
-
-        html {
-            position: relative;
-            overflow: hidden;
-            font-size: 16px;
-        }
-
-        body {  
-            background: rgb(19, 19, 19);
-            width: 100%;
-            height: 600px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-        }
-
-        .card {
-            width: 300px;
-            height: 80%;
-            background: #fff;
-            border-radius: 1.5rem;
-            padding: 1.5rem;
-            overflow: hidden;
-            background: rgb(19, 19, 19);
-            color: white;
-            margin-top: 20px;
-            border: 1px solid rgb(137, 43, 43);
-            border-radius: 50px;
-            box-shadow: -2px 2px 2px rgb(56, 73, 202);
-            top: 0;
-            transition: top ease 0.5s;
-            opacity: 0.8;
-        }
-       
-        .button {
-            font-family: 'Poppins', cursive;
-            font-size: 1.2rem;
-            padding: 10px 30px;
-            margin: 20px 10px;
-            background-color: #5D5FEF;
-            color: #fff;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .button:hover {
-            background-color: #4A4E69;
-            transform: translateY(-3px);
-        }
-      
-    </style>
+    <title>Urban Thrift</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
-
 <body>
-      <a href="Grade 11/index.html"><button class="button">Grade 11</button></a>
-      <a href="Grade 12/ILS-Comprog 5/index.html"><button class="button">Grade 12</button></a>
-</body>
 
+    <div class="header">
+        <div class="title">Urban Thrift</div>
+        <nav class="navigation">
+            <a href="#">Shop</a>
+            <a href="#">Information</a>
+            <a href="#">Contact</a>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <div class="main-title">Urban Thrift</div>
+        <div class="main-subtitle">Discover Hidden Treasures, Embrace Unique Styles – Urban Thrift, Where Every Find is a Delight!</div>
+        <div class="item-container">
+            <div class="item"><img src="images/items/1.jpg"></div>
+            <div class="item"><img src="images/items/2.jpg"></div>
+            <div class="item"><img src="images/items/3.jpg"></div>
+            <div class="item"><img src="images/items/4.jpg"></div>
+            <div class="item"><img src="images/items/5.jpg"></div>
+            <div class="item"><img src="images/items/6.jpg"></div>
+        </div>
+        <div class="main-subtitle">What are you waiting for? Shop now!</div>
+        <button class="button">Shop now</button>
+        <button class="button" onclick="gotoMap()">Visit the store</button>
+        <div class="download-buttons">
+            <button onclick="dlwin()" class="download-button windows">Download for Windows</button>
+            <button onclick="dland()" class="download-button android">Download for Android</button>
+        </div>
+    </div>
+
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <script src="scripts/index.js"></script>
+</body>
 </html>
